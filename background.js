@@ -17,9 +17,16 @@ function tabIsNumbered(title) {
 
 function numberTabs(tabs) {
     const lastTabIndex = tabs.length - 1;
+    let prevWindowId = tabs[0].windowId;
+    let tabNumber = 1;
 
     for (let index = 0; index < tabs.length; index++) {
-        let tabNumber = index + 1; // Actual numbering of the tab
+        // let tabNumber = index + 1; // Actual numbering of the tab
+        if (tabs[index].windowId != prevWindowId) {
+            tabNumber = 1;
+        }
+        prevWindowId = tabs[index].windowId;
+
         let tabName = tabs[index].title;
 
         // Remove all existing numbering
@@ -29,6 +36,7 @@ function numberTabs(tabs) {
 
         if (index < 8) {
             tabName = `{${tabNumber}} ${tabName}`;
+            tabNumber += 1;
         } else if (index == lastTabIndex) {
             tabName = `{9} ${tabName}`;
         }
