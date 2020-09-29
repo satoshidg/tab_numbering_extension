@@ -1,0 +1,16 @@
+{
+    "name": "Tab Numbering for Shortcut",
+    "version": "1.0",
+    "description": "Helloooo",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "http://*/",
+        "https://*/"
+    ]
+}
