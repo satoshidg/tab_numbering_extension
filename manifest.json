@@ -1,7 +1,7 @@
 {
     "name": "Tab Numbering for Shortcut",
     "version": "1.0",
-    "description": "Helloooo",
+    "description": "This shortcut displays tab numbering for easier use of shortcut",
     "manifest_version": 2,
     "background": {
         "scripts": ["background.js"],
