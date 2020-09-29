@@ -12,7 +12,7 @@
 const tabNumberRegEx = /{[1-9]}/;
 
 function tabIsNumbered(title) {
-    return tabNumberRegEx.test(title);
+    return tabNumberRegEx.test(title.substr(0, 3));
 }
 
 function numberTabs(tabs) {
